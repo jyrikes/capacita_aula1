@@ -1,31 +1,27 @@
-horaInicial = int(input("Hora inicial: "))
-minutoInicial = int(input("Minuto inical")) 
-while not(horaInicial <=24 and horaInicial>=0):
-    horaInicial = int(input("Hora inicial: "))
+def lerTempo(mensagem):
+    
+    hora = 90
+    minuto = 90
+    while not(hora <=24 and hora>=0):
+        hora = int(input("Hora {}: ".format(mensagem)))
 
-while not (minutoInicial <=60 and minutoInicial>=0):
-    minutoInicial = int(input("Minuto inical"))
+    while not (minuto <=60 and minuto>=0):
+        minuto = int(input("Minuto {}: ".format(mensagem)))
+    tempo = (hora,minuto)
+    return tempo
 
-horaFinal = int(input("Hora Final: "))
-minutoFinal = int(input("Minuto Final")) 
 
-while not(horaFinal <=24 and horaFinal>=0):
-    horaFinal = int(input("Hora Final: "))
-
-while not (minutoInicial <=60 and minutoInicial>=0):
-    minutoFinal = int(input("Minuto Final"))
+horaInicial,minutoInicial = lerTempo("Inicial")
+horaFinal,minutoFinal = lerTempo("Final")
 
 horaConvertida = (horaFinal - horaInicial) * 60
 diferecaMinutos = minutoFinal-minutoInicial
-
 somaMinutos = diferecaMinutos + horaConvertida
 
-horas = int(somaMinutos/60)
+horas = somaMinutos//60
 minutos = diferecaMinutos %60
 
+if(horas < 0 ):
+    horas = 24 + horas
 
-
-print(horas)
-
-
-print(minutos)
+print("O JOGO DUROU {} HORA(S) E {} MINUTO(S)".format(horas,minutos) )
