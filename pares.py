@@ -7,4 +7,4 @@ for i in range (5):
     else:
         numerosImpares = numerosImpares+1
 print("Pares: ",numerosPares)
-print("Impares",numerosImpares)
+print("Impares: ",numerosImpares)

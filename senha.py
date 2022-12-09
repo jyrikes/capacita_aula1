@@ -1,9 +1,10 @@
 
-senhaDigitada = input("Senha:")
+senhaDigitada = ""
 
-senha = "1234"
+senha = "2002"
 
 while(senhaDigitada != senha):
     senhaDigitada = input("Senha:")
-    print("Senha errada")
-print("Acessado")
+    print("Senha Invalida")
+
+print("Acesso Permitido")

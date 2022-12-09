@@ -47,7 +47,7 @@ while(prestacao != 0):
 
     print("\n O cliente pagará R$ {}\n".format(prestacao))
 
-print("\nRelatório da execução:\n"
+print("\nRelatório do dia:\n"
 "       Valor total das prestações : R$ {}\n"
 "       Número total de parcelas    :    {}\n "
 "\nPara o relatório de todas execuções digite 1".format(totalPago,numeroPrestacoes))
