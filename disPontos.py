@@ -20,7 +20,9 @@ if __name__ == '__main__':
     p1 = Ponto()
     pontos = []
     for i in range(5):
+        print("Digite mais um ponto\n")
         pontos.append(Ponto())
+
         print("A distância do ponto 1 para o ponto ", i+2 , " é " , p1.distancia(pontos[i]))
 
    
