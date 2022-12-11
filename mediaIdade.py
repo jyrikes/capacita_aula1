@@ -3,7 +3,9 @@ somaIdade = 0
 contador =0
 
 while idade >= 0:
-    idade = int(input("Digite a idade: "))
+  #Observe que idades podem ser valores flutuantes !!
+    idade = float(input("Digite a idade: "))
+    idade = int(idade)
     somaIdade = somaIdade + idade
     contador = contador +1
 
