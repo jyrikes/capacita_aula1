@@ -46,7 +46,11 @@ class Banco():
         
         for conta in self.contas:
             if conta.numero == numConta:
-                conta.saque(valor)
+
+                if(conta.saque(valor)):
+                     print("Saque realizado com sucesso ! ")
+                else: 
+                    print("Saque Inválido , sem dinheiro suficiente ")
 
 
 
@@ -81,5 +85,6 @@ while escolha > 0:
         nunConta = int(input("digite o numero da conta:"))
         valor = int(input("digite o valor que deseja sacar:"))
         saldo = bancoUfrpe.sacar(numConta, valor)
-        print("Saque realizado com sucesso ! ")
+        
+       
     escolha = int(input("digite a opção desejada:"))
