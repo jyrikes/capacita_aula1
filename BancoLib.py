@@ -10,7 +10,11 @@ class Conta():
         self.saldo = self.saldo + valor
 
     def saque(self,valor):
-        self.saldo = self.saldo - valor
+        if self.saldo > 0:
+            self.saldo = self.saldo - valor
+            return True
+        else:
+            return False
 
 
 class Banco():
@@ -39,6 +43,7 @@ class Banco():
                 conta.deposite(valor)
 
     def sacar(self, numConta, valor):
+        
         for conta in self.contas:
             if conta.numero == numConta:
                 conta.saque(valor)
